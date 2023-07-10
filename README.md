@@ -2,7 +2,7 @@
 
 Run a command against a Google Kubernetes Engine cluster. This pipe uses [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/), a command line interface for running commands against Kubernetes clusters.
 
-## You will want to build your own Docker image and upload it to your Docker repository. Afterwards, you will want to declare IMAGE_NAME, DOCKERUSER, DOCKERPASS and the pipe name in order to be able to use it in your Bitbucket Pipelines. This modified version is in line with the deprecation notice [here](https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke) .
+## You will want to build your own Docker image and upload it to your Docker repository. Afterwards, you will want to declare IMAGE_NAME, DOCKERUSER, DOCKERPASS and the pipe name in order to be able to use it in your Bitbucket Pipelines. 
 
 ## YAML Definition
 
@@ -11,12 +11,12 @@ Add the following snippet to the script section of your `bitbucket-pipelines.yml
 ```yaml
 - pipe: atlassian/google-gke-kubectl-run:2.2.0 #Declare your own pipe name in pipe.yml
   variables:
-	Added variables:
-	IMAGE_NAME: '<string>' # pipe.yml and bitbucket-pipelines.yml
-	DOCKERUSER: '<string>' bitbucket-pipelines.yml
-	DOCKERPASS: '<string>' bitbucket-pipelines.yml
+    Added variables:
+    IMAGE_NAME: '<string>' # pipe.yml and bitbucket-pipelines.yml
+    DOCKERUSER: '<string>' bitbucket-pipelines.yml
+    DOCKERPASS: '<string>' bitbucket-pipelines.yml
 
-	Original variables:
+    Original variables:
     KEY_FILE: '<string>'
     PROJECT: '<string>'
     COMPUTE_ZONE: '<string>'
