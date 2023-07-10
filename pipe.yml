@@ -1,0 +1,17 @@
+name: Google Kubernetes Engine kubectl run
+image: $IMAGE_NAME
+description: Run a kubectl command on your Google Kubernetes Engine cluster.
+category: Deployment
+repository: https://bitbucket.org/gke-kubectl-run/
+vendor:
+  name: Google
+  website: https://www.google.com/
+maintainer:
+  name: Atlassian
+  website: https://www.atlassian.com/
+tags:
+    - bitbucket-pipelines
+    - pipes
+    - kubernetes
+    - google
+  

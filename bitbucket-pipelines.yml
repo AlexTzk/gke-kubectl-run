@@ -1,0 +1,18 @@
+options:
+  docker: true
+
+definitions:
+  steps:
+      - step: &build-docker
+          name: Build Docker image
+          script:
+          - docker build -t $IMAGE_NAME -f Dockerfile .
+          - docker login -u $DOCKERUSER -p $DOCKERPASS
+          - docker push $IMAGE_NAME
+pipelines:
+  tags:
+    v*:
+      - step: *build-docker
+  branches:
+    master:
+      - step: *build-docker

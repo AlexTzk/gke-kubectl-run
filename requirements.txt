@@ -1,0 +1,1 @@
+git+https://bitbucket.org/atlassian/kubectl-run.git@3.3.1
